@@ -1,1 +1,181 @@
-cjhfiy
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parc Enchanté des Petits Aventuriers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9ff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #ffb703, #fb8500);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #fb8500;
+      margin-bottom: 30px;
+    }
+    .attractions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #219ebc;
+    }
+    .tarifs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .price-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .price-box h3 {
+      color: #023047;
+    }
+    .price {
+      font-size: 2rem;
+      color: #fb8500;
+      margin: 15px 0;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    form button {
+      background: #fb8500;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      background: #ffb703;
+    }
+    footer {
+      background: #023047;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎡 Parc Enchanté des Petits Aventuriers</h1>
+  <p>Le parc d'attractions 100% dédié aux enfants de 3 à 12 ans</p>
+</header>
+
+<section>
+  <h2>Nos Attractions</h2>
+  <div class="attractions">
+    <div class="card">
+      <h3>🚂 Le Petit Train Magique</h3>
+      <p>Une balade enchantée à travers le parc pour découvrir un univers féerique.</p>
+    </div>
+    <div class="card">
+      <h3>🏰 Le Château Gonflable</h3>
+      <p>Sauts, rires et aventures dans un immense château coloré et sécurisé.</p>
+    </div>
+    <div class="card">
+      <h3>🎠 Le Manège des Animaux</h3>
+      <p>Un manège doux et amusant avec des animaux rigolos pour les plus petits.</p>
+    </div>
+    <div class="card">
+      <h3>🧗 Parcours Aventurier</h3>
+      <p>Un parcours ludique pour grimper, ramper et relever des défis adaptés.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Tarifs</h2>
+  <div class="tarifs">
+    <div class="price-box">
+      <h3>Enfant</h3>
+      <p class="price">12 €</p>
+      <p>Accès illimité aux attractions</p>
+    </div>
+    <div class="price-box">
+      <h3>Adulte accompagnateur</h3>
+      <p class="price">6 €</p>
+      <p>Accès au parc</p>
+    </div>
+    <div class="price-box">
+      <h3>Pass Famille</h3>
+      <p class="price">30 €</p>
+      <p>2 adultes + 2 enfants</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Réserver vos billets</h2>
+  <form>
+    <input type="text" placeholder="Nom et prénom" required />
+    <input type="email" placeholder="Adresse email" required />
+    <input type="date" required />
+    <select required>
+      <option value="">Type de billet</option>
+      <option>Enfant</option>
+      <option>Adulte</option>
+      <option>Pass Famille</option>
+    </select>
+    <button type="submit">Réserver maintenant</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 - Parc Enchanté des Petits Aventuriers | Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
+
