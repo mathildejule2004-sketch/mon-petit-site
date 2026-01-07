@@ -3,52 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parc Enchanté des Petits Aventuriers</title>
+  <title>Le Royaume des 4 Éléments</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9ff;
+      background-color: #f0f9ff;
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #ffb703, #fb8500);
+      background: linear-gradient(135deg, #ff595e, #ffca3a, #8ac926, #1982c4);
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
     h2 {
       text-align: center;
-      color: #fb8500;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
-    .attractions {
+    .elements {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
     .card {
       background: white;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      text-align: center;
       transition: transform 0.3s;
     }
-    .card:hover {
-      transform: translateY(-5px);
+    .card:hover { transform: scale(1.05); }
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
-    .card h3 {
-      color: #219ebc;
-    }
+    .feu { background: #fff0f0; }
+    .eau { background: #f0f8ff; }
+    .terre { background: #f3f9f1; }
+    .air { background: #f7f7ff; }
+
     .tarifs {
       display: flex;
       flex-wrap: wrap;
@@ -56,52 +60,45 @@
       gap: 20px;
     }
     .price-box {
-      background: #ffffff;
-      border-radius: 16px;
+      background: white;
+      border-radius: 20px;
       padding: 25px;
       width: 250px;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-    .price-box h3 {
-      color: #023047;
-    }
     .price {
       font-size: 2rem;
-      color: #fb8500;
       margin: 15px 0;
     }
     form {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
+      padding: 35px;
+      border-radius: 25px;
       max-width: 500px;
       margin: auto;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
     form input, form select, form button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin-bottom: 15px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 1rem;
     }
     form button {
-      background: #fb8500;
+      background: #1982c4;
       color: white;
       border: none;
       cursor: pointer;
       font-weight: bold;
     }
-    form button:hover {
-      background: #ffb703;
-    }
     footer {
       background: #023047;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       margin-top: 40px;
     }
   </style>
@@ -109,47 +106,51 @@
 <body>
 
 <header>
-  <h1>🎡 Parc Enchanté des Petits Aventuriers</h1>
-  <p>Le parc d'attractions 100% dédié aux enfants de 3 à 12 ans</p>
+  <h1>🌍 Le Royaume des 4 Éléments</h1>
+  <p>Un parc d'attractions magique pour enfants inspiré du Feu, de l'Eau, de la Terre et de l'Air</p>
 </header>
 
 <section>
-  <h2>Nos Attractions</h2>
-  <div class="attractions">
-    <div class="card">
-      <h3>🚂 Le Petit Train Magique</h3>
-      <p>Une balade enchantée à travers le parc pour découvrir un univers féerique.</p>
+  <h2>Nos Attractions Magiques</h2>
+  <div class="elements">
+    <div class="card feu">
+      <div class="icon">🔥</div>
+      <h3>Le Volcan de Feu</h3>
+      <p>Toboggans flamboyants et jeux de lumière pour les petits aventuriers courageux.</p>
     </div>
-    <div class="card">
-      <h3>🏰 Le Château Gonflable</h3>
-      <p>Sauts, rires et aventures dans un immense château coloré et sécurisé.</p>
+    <div class="card eau">
+      <div class="icon">💧</div>
+      <h3>La Rivière Enchantée</h3>
+      <p>Jeux d'eau, bateaux rigolos et éclaboussures garanties en toute sécurité.</p>
     </div>
-    <div class="card">
-      <h3>🎠 Le Manège des Animaux</h3>
-      <p>Un manège doux et amusant avec des animaux rigolos pour les plus petits.</p>
+    <div class="card terre">
+      <div class="icon">🌱</div>
+      <h3>La Forêt de la Terre</h3>
+      <p>Parcours nature, cabanes et animaux fantastiques cachés dans la verdure.</p>
     </div>
-    <div class="card">
-      <h3>🧗 Parcours Aventurier</h3>
-      <p>Un parcours ludique pour grimper, ramper et relever des défis adaptés.</p>
+    <div class="card air">
+      <div class="icon">🌬️</div>
+      <h3>Les Nuages de l'Air</h3>
+      <p>Trampolines, tyroliennes douces et manèges aériens pour voler comme le vent.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Tarifs</h2>
+  <h2>Tarifs du Royaume</h2>
   <div class="tarifs">
     <div class="price-box">
-      <h3>Enfant</h3>
+      <h3>🧒 Enfant</h3>
       <p class="price">12 €</p>
-      <p>Accès illimité aux attractions</p>
+      <p>Accès illimité aux 4 mondes</p>
     </div>
     <div class="price-box">
-      <h3>Adulte accompagnateur</h3>
+      <h3>👨‍👩‍👧 Adulte accompagnateur</h3>
       <p class="price">6 €</p>
       <p>Accès au parc</p>
     </div>
     <div class="price-box">
-      <h3>Pass Famille</h3>
+      <h3>👨‍👩‍👧‍👦 Pass Famille</h3>
       <p class="price">30 €</p>
       <p>2 adultes + 2 enfants</p>
     </div>
@@ -157,7 +158,7 @@
 </section>
 
 <section>
-  <h2>Réserver vos billets</h2>
+  <h2>🎟️ Réserver vos billets</h2>
   <form>
     <input type="text" placeholder="Nom et prénom" required />
     <input type="email" placeholder="Adresse email" required />
@@ -168,14 +169,13 @@
       <option>Adulte</option>
       <option>Pass Famille</option>
     </select>
-    <button type="submit">Réserver maintenant</button>
+    <button type="submit">Entrer dans le Royaume ✨</button>
   </form>
 </section>
 
 <footer>
-  <p>© 2026 - Parc Enchanté des Petits Aventuriers | Tous droits réservés</p>
+  <p>© 2026 - Le Royaume des 4 Éléments | Un monde magique pour les enfants</p>
 </footer>
 
 </body>
 </html>
-
