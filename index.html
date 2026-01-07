@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <!-- Matomo -->
+  <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -32,143 +32,128 @@
       padding: 50px 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .elements {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: scale(1.05); }
-    .icon {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; }
+    .presentation { background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); line-height: 1.8; }
+    .element-section { margin-bottom: 60px; }
+    .elements { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.12); text-align: center; }
+    .icon { font-size: 3rem; margin-bottom: 15px; }
     .feu { background: #fff0f0; }
     .eau { background: #f0f8ff; }
     .terre { background: #f3f9f1; }
     .air { background: #f7f7ff; }
-
-    .tarifs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .price-box {
-      background: white;
-      border-radius: 20px;
-      padding: 25px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .price {
-      font-size: 2rem;
-      margin: 15px 0;
-    }
-    form {
-      background: white;
-      padding: 35px;
-      border-radius: 25px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    form input, form select, form button {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    form button {
-      background: #1982c4;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    footer {
-      background: #023047;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
+    .tarifs { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .price-box { background: white; border-radius: 20px; padding: 25px; width: 250px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .price { font-size: 2rem; margin: 15px 0; }
+    form { background: white; padding: 35px; border-radius: 25px; max-width: 500px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    form input, form select, form button { width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ccc; font-size: 1rem; }
+    form button { background: #1982c4; color: white; border: none; font-weight: bold; cursor: pointer; }
+    button { padding: 10px 16px; margin: 5px; border: none; border-radius: 20px; font-size: 1rem; cursor: pointer; font-weight: bold; }
+    footer { background: #023047; color: white; text-align: center; padding: 25px; }
+    body.feu-theme { background: #fff0f0; }
+    body.eau-theme { background: #e6f6ff; }
+    body.terre-theme { background: #f0f7ef; }
+    body.air-theme { background: #f5f5ff; }
+    body.feu-theme header { background: linear-gradient(135deg,#ff595e,#ff924c); }
+    body.eau-theme header { background: linear-gradient(135deg,#4dabf7,#74c0fc); }
+    body.terre-theme header { background: linear-gradient(135deg,#8ac926,#6a994e); }
+    body.air-theme header { background: linear-gradient(135deg,#bdb2ff,#a0c4ff); }
   </style>
 </head>
 <body>
 
 <header>
   <h1>🌍 Le Royaume des 4 Éléments</h1>
-  <p>Un parc d'attractions magique pour enfants inspiré du Feu, de l'Eau, de la Terre et de l'Air</p>
+  <p>Un parc d'attractions magique pour enfants de 3 à 12 ans</p>
+  <div style="margin-top:20px;">
+    <button onclick="changeTheme('feu')">🔥 Feu</button>
+    <button onclick="changeTheme('eau')">💧 Eau</button>
+    <button onclick="changeTheme('terre')">🌱 Terre</button>
+    <button onclick="changeTheme('air')">🌬️ Air</button>
+  </div>
 </header>
 
 <section>
-  <h2>Nos Attractions Magiques</h2>
-  <div class="elements">
+  <h2>✨ Présentation du Parc</h2>
+  <div class="presentation">
+    <p><strong>📍 Localisation :</strong> Situé au cœur d'un espace naturel verdoyant, le Royaume des 4 Éléments accueille les familles dans un cadre sécurisé et dépaysant.</p>
+    <p><strong>🌈 L'univers :</strong> Le parc est divisé en quatre mondes fantastiques inspirés des éléments naturels : le Feu, l'Eau, la Terre et l'Air. Chaque zone propose des décors colorés, des personnages imaginaires et des attractions adaptées aux enfants.</p>
+    <p><strong>🧒 Pour qui ?</strong> Le parc est spécialement conçu pour les enfants de 3 à 12 ans, avec des attractions ludiques, éducatives et accessibles, favorisant l'imagination et l'aventure.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🔥 Monde du Feu</h2>
+  <div class="elements element-section">
+    <div class="card feu">
+      <div class="icon">🌋</div>
+      <h3>Le Volcan Rigolo</h3>
+      <p>Toboggans lumineux et tunnels chauffés pour une aventure pleine de surprises.</p>
+    </div>
     <div class="card feu">
       <div class="icon">🔥</div>
-      <h3>Le Volcan de Feu</h3>
-      <p>Toboggans flamboyants et jeux de lumière pour les petits aventuriers courageux.</p>
-    </div>
-    <div class="card eau">
-      <div class="icon">💧</div>
-      <h3>La Rivière Enchantée</h3>
-      <p>Jeux d'eau, bateaux rigolos et éclaboussures garanties en toute sécurité.</p>
-    </div>
-    <div class="card terre">
-      <div class="icon">🌱</div>
-      <h3>La Forêt de la Terre</h3>
-      <p>Parcours nature, cabanes et animaux fantastiques cachés dans la verdure.</p>
-    </div>
-    <div class="card air">
-      <div class="icon">🌬️</div>
-      <h3>Les Nuages de l'Air</h3>
-      <p>Trampolines, tyroliennes douces et manèges aériens pour voler comme le vent.</p>
+      <h3>La Danse des Flammes</h3>
+      <p>Un manège tournoyant avec jeux de lumière et musique entraînante.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Tarifs du Royaume</h2>
+  <h2>💧 Monde de l'Eau</h2>
+  <div class="elements element-section">
+    <div class="card eau">
+      <div class="icon">🚣‍♂️</div>
+      <h3>La Rivière Enchantée</h3>
+      <p>Balade en bateau au fil de l'eau avec décors féeriques.</p>
+    </div>
+    <div class="card eau">
+      <div class="icon">💦</div>
+      <h3>Les Jets Rigolos</h3>
+      <p>Aire de jeux aquatique avec éclaboussures et rires garantis.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🌱 Monde de la Terre</h2>
+  <div class="elements element-section">
+    <div class="card terre">
+      <div class="icon">🌳</div>
+      <h3>La Forêt Magique</h3>
+      <p>Parcours nature avec cabanes, ponts et animaux fantastiques.</p>
+    </div>
+    <div class="card terre">
+      <div class="icon">🐞</div>
+      <h3>Le Jardin des Insectes Géants</h3>
+      <p>Découverte ludique de la nature à travers des sculptures géantes.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🌬️ Monde de l'Air</h2>
+  <div class="elements element-section">
+    <div class="card air">
+      <div class="icon">🎈</div>
+      <h3>Les Ballons Volants</h3>
+      <p>Manège aérien doux pour s'envoler au-dessus du parc.</p>
+    </div>
+    <div class="card air">
+      <div class="icon">🪁</div>
+      <h3>La Plaine des Cerfs-Volants</h3>
+      <p>Zone ludique avec trampolines et jeux portés par le vent.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>💶 Tarifs</h2>
   <div class="tarifs">
-    <div class="price-box">
-      <h3>🧒 Enfant</h3>
-      <p class="price">12 €</p>
-      <p>Accès illimité aux 4 mondes</p>
-    </div>
-    <div class="price-box">
-      <h3>👨‍👩‍👧 Adulte accompagnateur</h3>
-      <p class="price">6 €</p>
-      <p>Accès au parc</p>
-    </div>
-    <div class="price-box">
-      <h3>👨‍👩‍👧‍👦 Pass Famille</h3>
-      <p class="price">30 €</p>
-      <p>2 adultes + 2 enfants</p>
-    </div>
+    <div class="price-box"><h3>🧒 Enfant</h3><p class="price">12 €</p></div>
+    <div class="price-box"><h3>👨‍👩‍👧 Adulte</h3><p class="price">6 €</p></div>
+    <div class="price-box"><h3>👨‍👩‍👧‍👦 Pass Famille</h3><p class="price">30 €</p></div>
   </div>
 </section>
 
@@ -191,6 +176,12 @@
 <footer>
   <p>© 2026 - Le Royaume des 4 Éléments | Un monde magique pour les enfants</p>
 </footer>
+
+<script>
+function changeTheme(element){
+  document.body.className = element + '-theme';
+}
+</script>
 
 </body>
 </html>
